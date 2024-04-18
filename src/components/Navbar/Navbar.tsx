@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./Navbar.css";
 import logo from "../../assets/logo_mikexd.png";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import underline from "../../assets/theme_pattern.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import menu_open from "../../assets/icons8-menu-50.png";
@@ -10,18 +11,33 @@ const NavBar = () => {
   const [menu, setMenu] = useState("home");
   const menuRef = useRef<HTMLUListElement>(null);
 
-  const openMenu = () => {
+  useEffect(() => {
+    closeMenu();
+  }, [menu]);
+
+  useEffect(() => {
+    if (menu !== "home") {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY <= 50) {
+          setMenu("home");
+        }
+      });
+    }
+  }, [menu]);
+
+  function openMenu() {
     if (menuRef.current !== null) {
       menuRef.current.style.right = "0";
     }
     return;
-  };
-  const closeMenu = () => {
+  }
+
+  function closeMenu() {
     if (menuRef.current !== null) {
       menuRef.current.style.right = "-350px";
     }
     return;
-  };
+  }
 
   return (
     <div id="home" className="navbar">

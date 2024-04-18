@@ -49,7 +49,8 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+/* ---Media------------------------------------ */
+@media (max-width: 1080px) {
   .navbar {
     margin: 20px 50px;
   }
@@ -58,10 +59,9 @@
   }
   .nav-mob-open {
     display: block;
-    position: fixed;
-    right: 50px;
-    background-color: #161513;
-
+    position: relative;
+    right: 10px;
+    background-color: rgb(22, 21, 19, 0.8);
     border: 1px solid #161513;
     border-radius: 10px;
     padding: 5px;
@@ -73,6 +73,7 @@
     top: 30px;
     left: 290px;
     width: 30px;
+    cursor: pointer;
   }
   .nav-menu {
     position: fixed;
@@ -92,5 +93,11 @@
     padding-left: 100px;
     flex-direction: row;
     gap: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .navbar {
+    margin: 20px;
   }
 }
