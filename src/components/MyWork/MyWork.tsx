@@ -1,7 +1,7 @@
 import "./MyWork.css";
 import theme_pattern from "../../assets/theme_pattern.png";
 import mywork_data from "../../assets/mywork_data";
-import arrow_icon from "../../assets/arrow_icon.png";
+import git_icon from "../../assets/git_icon_50.png";
 
 const MyWork = () => {
   return (
@@ -12,13 +12,18 @@ const MyWork = () => {
       </div>
       <div className="mywork-container">
         {mywork_data.map((work, index) => (
-          <img key={index} src={work.w_img} alt="" />
+          <img
+            key={index}
+            src={work.w_img}
+            alt=""
+            onClick={() => window.open(work.w_link, work.w_name)}
+          />
         ))}
       </div>
-      <div className="mywork-showmore">
-        <p>Show more</p>
-        <img src={arrow_icon} alt="" />
-      </div>
+      <a href="https://github.com/MikeXXd" className="mywork-git">
+        <p>My Code</p>
+        <img src={git_icon} alt="" />
+      </a>
     </div>
   );
 };

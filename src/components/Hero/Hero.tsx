@@ -1,8 +1,14 @@
 import "./Hero.css";
 import profile_img from "../../assets/profile_img.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import CV from "../../assets/Michal_Viliš_CV_03_2024_en.pdf";
 
 const Hero = () => {
+  const openPdf = () => {
+    window.open(CV, "_blank");
+    console.log("CV opened");
+  };
+
   return (
     <div id="hero" className="hero">
       <img src={profile_img} alt="" />
@@ -20,7 +26,9 @@ const Hero = () => {
             Connect With Me
           </AnchorLink>
         </div>
-        <div className="hero-resume">My resume</div>
+        <div className="hero-resume" onClick={openPdf}>
+          My resume
+        </div>
       </div>
     </div>
   );

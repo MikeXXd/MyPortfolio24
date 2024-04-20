@@ -7,19 +7,22 @@ const About = () => {
     <div id="about" className="about">
       <div className="about-title">
         <h1>About me</h1>
-        <img src={theme_pattern} alt="" />
+        <img src={theme_pattern} alt="Theme pattern" />
       </div>
       <div className="about-section">
         <div className="about-left">
-          <img src={profile_img} alt="" width={300} />
+          <img src={profile_img} alt="Profile image" width={300} />
         </div>
         <div className="about-right">
           <div className="about-para">
             <p>
-              A am an experienced programmer with a miolions of light years of
-              experience ....
+              I am an exploring programmer with a passion to create the art of
+              frontend development and crystalize it into excellence.
             </p>
-            <p>My passion for frontend development is not only....</p>
+            <p>
+              My passion for frontend development is not only a hobby but also a
+              career path that I am dedicated to pursuing.
+            </p>
           </div>
           <div className="about-skills">
             <div className="about-skill">
@@ -35,7 +38,7 @@ const About = () => {
               <hr style={{ width: "60%" }} />
             </div>
             <div className="about-skill">
-              <p>Next JS</p>
+              <p>TypeScript</p>
               <hr style={{ width: "50%" }} />
             </div>
           </div>
@@ -43,19 +46,19 @@ const About = () => {
       </div>
       <div className="about-achievements">
         <div className="about-achievement">
-          <h1>10+</h1>
+          <h1>1+</h1>
           <p>YEARS OF EXPERIENCE</p>
         </div>
         <hr />
         <div className="about-achievement">
-          <h1>90+</h1>
+          <h1>10+</h1>
           <p>PROJECTS COMPLETED</p>
         </div>
-        <hr />
+        {/* <hr />
         <div className="about-achievement">
           <h1>15+</h1>
           <p>HAPPY CLIENTS</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

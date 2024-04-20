@@ -1,24 +1,28 @@
 import "./Footer.css";
 import logo from "../../assets/logo_mikexd.png";
-import user_icon from "../../assets/icons8-user-50.png";
+import git_icon from "../../assets/git_icon_50.png";
+import linkedIn_icon from "../../assets/linkedin_icon_50.svg";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-top">
         <div className="footer-top-left">
-          <img src={logo} alt="" width={100} />
+          <img
+            src={logo}
+            alt=""
+            width={100}
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+          />
           <p>
-            I'am frontend developer from, Beskydy with billions of years of
-            experience
+            I am a co-creator of this universe with billions of years of
+            experience.
           </p>
-        </div>
-        <div className="footer-top-right">
-          <div className="footer-email-input">
-            <img src={user_icon} alt="" />
-            <input type="email" placeholder="Enter your email" />
-          </div>
-          <div className="footer-subscribe">Subscribe</div>
         </div>
       </div>
       <hr />
@@ -27,9 +31,12 @@ const Footer = () => {
           &copy; 2024 MikeXd. All Rights Reserved
         </p>
         <div className="footer-bottom-right">
-          <p>Term of services</p>
-          <p>Privacy policy</p>
-          <p>Connect with me</p>
+          <a href="https://github.com/MikeXXd">
+            <img src={git_icon} alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/michal-vili%C5%A1-483196251/">
+            <img src={linkedIn_icon} alt="" />
+          </a>
         </div>
       </div>
     </div>

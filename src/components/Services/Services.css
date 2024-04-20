@@ -22,22 +22,22 @@
   right: 0;
   z-index: -1;
 }
+.services-comtainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(360px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
 .services-format {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   gap: 20px;
   padding: 60px;
   border-radius: 10px;
   border: 2px solid white;
   transition: 0.4s;
   cursor: pointer;
-}
-.services-comtainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 80px;
 }
 .services-format h3 {
   font-size: 28px;
@@ -46,7 +46,11 @@
 .services-format h2 {
   font-size: 38px;
   font-weight: 800;
-  background: linear-gradient(270deg, #df8908 50%, #b415ff 100%);
+  background: linear-gradient(
+    270deg,
+    var(--primary-color) 50%,
+    var(--secondary-color) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,20 +61,21 @@
   line-height: 40px;
   max-width: 300px;
 }
-.services-readmore {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 20px;
-}
 .services-format:hover {
-  border: 2px solid #ff00ff;
+  border: 2px solid var(--secondary-color);
   background-image: linear-gradient(45deg, #3f0028, #582300);
   transform: scale(1.05);
   transition: 0.4s;
 }
+
 /* -------Media------------------------------------------- */
-@media (max-width: 768px) {
+
+@media (max-width: 1200px) {
+  .services-comtainer {
+    grid-template-columns: repeat(2, minmax(360px, 1fr));
+  }
+}
+@media (max-width: 1000px) {
   .services {
     align-items: start;
     gap: 70px;
@@ -89,6 +94,7 @@
     gap: 20px;
     padding: 32px;
   }
+
   .services-format h2 {
     font-size: 28px;
   }
@@ -97,11 +103,22 @@
     line-height: 32px;
     max-width: 300px;
   }
-  .services-readmore img {
-    width: 20px;
+  .services-comtainer {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    align-items: start;
   }
   .services-comtainer {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .services-format.self-end {
+    align-self: end;
   }
 }

@@ -6,7 +6,7 @@
 }
 
 .hero img {
-  margin-top: 150px;
+  margin-top: 50px;
   width: 350px;
   height: 350px;
   border-radius: 50%;
@@ -21,7 +21,11 @@
 }
 
 .hero h1 span {
-  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background: linear-gradient(
+    270deg,
+    var(--primary-color) 10%,
+    var(--secondary-color) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +50,11 @@
 .hero-connect {
   padding: 25px 45px;
   border-radius: 50px;
-  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  background: linear-gradient(
+    264deg,
+    var(--primary-color) -5.09%,
+    var(--secondary-color) 106.28%
+  );
   cursor: pointer;
 }
 
@@ -54,6 +62,7 @@
   padding: 25px 75px;
   border-radius: 50px;
   border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .hero-connect:hover {
@@ -61,12 +70,13 @@
 }
 
 .hero-resume:hover {
-  border-color: #b415ff;
+  border-color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
+/* ---Media------------------------------------------- */
+@media (max-width: 1000px) {
   .hero img {
-    margin-top: 120px;
+    margin-top: 50px;
     height: 260px;
     width: 260px;
   }

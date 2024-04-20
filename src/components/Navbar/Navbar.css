@@ -5,6 +5,15 @@
   margin: 20px 170px;
 }
 
+.action-img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.action-img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -16,7 +25,11 @@
 .nav-connect {
   padding: 20px 40px;
   border-radius: 50px;
-  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  background: linear-gradient(
+    267deg,
+    var(--primary-color) 0.36%,
+    var(--secondary-color) 102.06%
+  );
   font-size: 22px;
   cursor: pointer;
   transition: 0.5s;
@@ -42,9 +55,7 @@
   text-decoration: none;
 }
 
-.nav-mob-close {
-  display: none;
-}
+.nav-mob-close,
 .nav-mob-open {
   display: none;
 }
@@ -62,7 +73,7 @@
     position: relative;
     right: 10px;
     background-color: rgb(22, 21, 19, 0.8);
-    border: 1px solid #161513;
+    border: 1px solid var(--background-color);
     border-radius: 10px;
     padding: 5px;
     z-index: 1;

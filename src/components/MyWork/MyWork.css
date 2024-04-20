@@ -30,18 +30,21 @@
 .mywork-container img {
   box-sizing: border-box;
   width: 419px;
-  height: 280px;
+  height: 285px;
   transition: 0.3s;
   border-radius: 10px;
   cursor: pointer;
 }
 .mywork-container img:hover {
   transform: scale(1.1);
-  border: 4px solid #ff00ff;
+  border: 4px solid grb(223, 137, 8);
+  box-shadow: 0px 0px 100px rgba(223, 137, 8, 0.5);
   border-radius: 10px;
   transition: 0.3s;
 }
-.mywork-showmore {
+.mywork-git {
+  text-decoration: none;
+  color: white;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -54,12 +57,19 @@
   transition: 0.6s;
   cursor: pointer;
 }
-.mywork-showmore:hover {
+.mywork-git:hover {
   gap: 35px;
   transition: 0.6s;
+  box-shadow: 0px 0px 100px rgba(223, 137, 8, 0.5);
 }
 /* ---Media------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .mywork-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
   .mywork {
     gap: 50px;
     margin: 50px 70px;
@@ -76,17 +86,22 @@
     bottom: -31px;
   }
   .mywork-container {
-    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
   .mywork-container img {
     width: 100%;
     height: 100%;
   }
-  .mywork-showmore {
+  .mywork-git {
     padding: 20px 40px;
     font-size: 18px;
     margin: 50px auto;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .mywork-container {
+    grid-template-columns: 1fr;
   }
 }

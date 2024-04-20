@@ -3,9 +3,17 @@
   padding: 0;
 }
 
+:root {
+  /* --secondary-color: red; */
+  --primary-color: rgb(223, 137, 8);
+  --secondary-color: #b4189f;
+  --global-background-color: #161513;
+  /* --text-color: #d8d8d8; */
+}
+
 body {
   height: 100vh;
-  background: #161513;
+  background: var(--global-background-color);
   color: white;
   font-family: "outfit";
 }
