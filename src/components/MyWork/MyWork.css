@@ -101,6 +101,9 @@
 }
 
 @media (max-width: 600px) {
+  .mywork {
+    margin: 50px 30px;
+  }
   .mywork-container {
     grid-template-columns: 1fr;
   }

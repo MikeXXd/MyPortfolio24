@@ -104,3 +104,13 @@
     border-radius: 40px;
   }
 }
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 50px 10px;
+  }
+  .hero-action {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

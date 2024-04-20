@@ -29,7 +29,6 @@ const mywork_data: MyWorkData[] = [
     w_no: 3,
     w_name: "Enjoy The Photo application",
     w_img: project3_img,
-    w_link: "https://enjoythephotos.netlify.app/",
   },
   // {
   //   w_no: 4,

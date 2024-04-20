@@ -122,3 +122,17 @@
     align-self: end;
   }
 }
+
+@media (max-width: 600px) {
+  .services {
+    margin: 50px 30px;
+  }
+}
+@media (max-width: 500px) {
+  .services-format {
+    align-self: center;
+  }
+  .services-format.self-end {
+    align-self: center;
+  }
+}

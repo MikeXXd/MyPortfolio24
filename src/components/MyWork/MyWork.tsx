@@ -16,7 +16,7 @@ const MyWork = () => {
             key={index}
             src={work.w_img}
             alt=""
-            onClick={() => window.open(work.w_link, work.w_name)}
+            onClick={() => work.w_link && window.open(work.w_link, work.w_name)}
           />
         ))}
       </div>
