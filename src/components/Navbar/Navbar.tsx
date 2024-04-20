@@ -48,6 +48,7 @@ const NavBar = () => {
           className="action-img"
           width={100}
           onClick={() => setMenu("contact")}
+          title="Down to contact section"
         />
       </AnchorLink>
       <img

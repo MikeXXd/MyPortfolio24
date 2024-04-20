@@ -21,6 +21,7 @@ const Footer = () => {
                 behavior: "smooth",
               })
             }
+            title="Back to top"
           />
           <p>
             I am a co-creator of this universe with billions of years of
@@ -38,6 +39,7 @@ const Footer = () => {
             src={git_icon}
             alt=""
             onClick={() => window.open("https://github.com/MikeXXd")}
+            title="GitHub repository"
           />
           <img
             src={linkedIn_icon}

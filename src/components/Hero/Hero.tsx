@@ -26,7 +26,7 @@ const Hero = () => {
             Connect With Me
           </AnchorLink>
         </div>
-        <div className="hero-resume" onClick={openPdf}>
+        <div className="hero-resume" onClick={openPdf} title="Open in new tab">
           My resume
         </div>
       </div>

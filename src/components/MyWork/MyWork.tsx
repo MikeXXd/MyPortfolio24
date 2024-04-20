@@ -17,6 +17,7 @@ const MyWork = () => {
             src={work.w_img}
             alt=""
             onClick={() => work.w_link && window.open(work.w_link, work.w_name)}
+            title="Open in new tab"
           />
         ))}
       </div>
