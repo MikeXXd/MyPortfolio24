@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import "./Navbar.css";
 import logo from "../../assets/logo_mikexd.png";
 import { useEffect, useRef, useState } from "react";
